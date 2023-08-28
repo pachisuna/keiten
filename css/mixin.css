@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*
+読み込み先のscssで
+@import "mixin.scss";
+してから、このように使う。
+
+@include mq(max_lg) {
+	// 960以下
+}
+
+*/

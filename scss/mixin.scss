@@ -1,0 +1,29 @@
+$breakpoints: (
+    // キーと値
+    // "max-xl": "(max-width: 1236px)",
+    "max_lg": "(max-width: 960px)",
+    "max_md": "(max-width: 768px)",
+	"max_sm": "(max-width: 600px)",
+
+    "min_lg": "(min-width: 960px)",
+    "min_md": "(min-width: 768px)",
+	"min_sm": "(min-width: 600px)",
+) !default;
+
+// @mixin mq($breakpoint: nax-md) { //mdが初期値になっている。
+@mixin mq($breakpoint) {
+    @media screen and #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+/*
+読み込み先のscssで
+@import "mixin.scss";
+してから、このように使う。
+
+@include mq(max_lg) {
+	// 960以下
+}
+
+*/
