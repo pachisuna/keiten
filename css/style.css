@@ -444,7 +444,7 @@ body {
 }
 .mv .mv_point {
   position: relative;
-  margin: -20% auto 3%;
+  margin: -29% auto 0;
   width: 86%;
   z-index: 3;
 }
@@ -461,13 +461,18 @@ body {
 .mv .mv_point .caption {
   font-size: 90%;
 }
+.mv .mv_point_bottom {
+  margin: 0 auto 2%;
+  width: 82%;
+}
 .mv .mv_point_bottom .img {
   margin: 0 auto;
-  width: 22.5%;
-  max-width: 168px;
+  width: 24%;
+  max-width: 148px;
 }
 .mv .mv_point_bottom h2 {
-  margin: 2% 0 3%;
+  margin-top: 7%;
+  width: 75;
   line-height: 1.4;
   font-weight: 900;
 }
