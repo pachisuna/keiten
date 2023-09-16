@@ -444,12 +444,12 @@ body {
 }
 .mv .mv_point {
   position: relative;
-  margin: 0 auto 3%;
+  margin: -20% auto 3%;
   width: 86%;
   z-index: 3;
 }
 .mv .mv_point ul {
-  margin: -25% 0 2%;
+  margin: 5% 0 2%;
 }
 .mv .mv_point li {
   width: 31%;
@@ -608,8 +608,10 @@ body {
 }
 .example .voice_head {
   margin-bottom: 5%;
-  display: flex;
+}
+.example .voice_head .flex {
   justify-content: space-between;
+  align-items: center;
 }
 .example .voice_head .img {
   width: 28%;
@@ -621,10 +623,35 @@ body {
   border-radius: 50%;
 }
 .example .voice_head .txt {
-  margin-top: 3%;
   width: 68%;
-  font-size: 105%;
+  font-size: 110%;
   font-weight: 900;
+  line-height: 1.5;
+}
+.example .voice_head .txt .name {
+  display: block;
+}
+.example .voice_head .txt .up {
+  font-size: 110%;
+  color: #f12f2f;
+}
+.example .voice_head .txt .flex {
+  width: 100%;
+  justify-content: start;
+}
+.example .voice_head .txt .flex:last-of-type {
+  margin-top: 3px;
+}
+.example .voice_head .txt .before_after {
+  display: inline-block;
+  margin-right: 3px;
+  padding: 0.5% 0;
+  width: 5em;
+  text-align: center;
+  font-size: 105%;
+  color: #fff;
+  background-color: #f12f2f;
+  border-radius: 3px;
 }
 .example .voice_body {
   margin-bottom: 7%;
@@ -636,6 +663,10 @@ body {
   font-size: 120%;
   font-weight: 700;
   color: #f12f2f;
+}
+.example .caption {
+  margin: -3% 0 8%;
+  font-size: 75%;
 }
 .example .ex {
   margin: 0 auto;
@@ -817,24 +848,46 @@ body {
   line-height: 1.4;
 }
 .commit .commit_ex {
+  padding-bottom: 1%;
   position: relative;
-  margin: 10% auto 7%;
-  padding: 7%;
-  width: 81.3%;
-  border: 2px solid #f12f2f;
-  border-radius: 5px;
 }
 .commit .commit_ex h4 {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%) translateY(-50%);
-  display: inline-block;
+  margin-bottom: 3%;
   padding: 1px 1.5em;
   font-size: 110%;
   font-weight: 700;
   color: #f12f2f;
   background-color: #fff;
+  text-align: center;
+}
+.commit .commit_ex .txt_wrap {
+  margin: 0 auto 8%;
+  width: 81.3%;
+  font-size: 110%;
+  border: 1px solid #f12f2f;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.commit .commit_ex .txt_wrap .flex {
+  border-bottom: 1px solid #f12f2f;
+}
+.commit .commit_ex .txt_wrap .flex:last-of-type {
+  border-bottom: none;
+}
+.commit .commit_ex .txt_wrap .ttl {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 2.5%;
+  padding-right: 0;
+  width: 25%;
+  color: #f12f2f;
+  background-color: #fbebea;
+}
+.commit .commit_ex .txt_wrap .txt {
+  padding: 2.5%;
+  orphans: 0;
+  width: 75%;
 }
 .commit .commit_point {
   margin-bottom: 8%;
@@ -1061,10 +1114,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 1em 0;
   width: 77%;
-  height: 60%;
+  height: 80%;
   max-width: 600px;
-  max-height: 600px;
+  max-height: 700px;
   background-color: #fff;
   border-radius: 7px;
   z-index: -500;
@@ -1073,11 +1128,46 @@ body {
   z-index: 1500;
 }
 .popup .content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 300%;
+  width: 90%;
+  display: none;
+}
+.popup .content.active {
+  display: block;
+}
+.popup .content h4 {
+  text-align: center;
+  font-weight: 700;
+}
+.popup .content h4 span {
+  display: inline-block;
+}
+.popup .content h4 .no_limit {
+  margin-bottom: 3px;
+  padding: 1px 1.25em;
+  color: #fff;
+  background-color: #f12f2f;
+  font-size: 120%;
+  border-radius: 30px;
+}
+.popup .content h4 .ttl {
+  width: 100%;
+  font-size: 125%;
+}
+.popup .content h4 .c_red {
+  margin: 2% 0;
+  font-size: 115%;
+  line-height: 1.4;
+}
+.popup .content .txt {
+  margin: 0 auto;
+  width: 95%;
+  font-weight: 700;
+}
+.popup .content .to_line {
+  width: 100%;
+}
+.popup .content .to_line .caption {
+  font-size: 95%;
 }
 .popup .btn {
   position: absolute;
