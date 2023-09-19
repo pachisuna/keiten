@@ -199,6 +199,12 @@ body {
   display: block;
   margin: 6.6% auto 3.3%;
   width: 95%;
+  animation-name: dokidoki; /* アニメーション名の指定 */
+  animation-delay: 0s; /* アニメーションの開始時間指定 */
+  animation-duration: 1.5s; /* アニメーション動作時間の指定 */
+  animation-timing-function: ease-in-out;
+  /* アニメーションの動き（徐々に早く徐々に遅く）*/
+  animation-iteration-count: infinite; /* アニメーションをループさせる */
 }
 .mv .to_line a {
   margin: 4% auto 2%;
@@ -210,6 +216,23 @@ body {
   font-size: 110%;
 }
 
+@keyframes dokidoki {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .frame_title {
   display: block;
   position: absolute;
@@ -856,7 +879,7 @@ body {
   padding-bottom: 1%;
   position: relative;
 }
-.commit .commit_ex h4 {
+.commit .commit_ex .toggle {
   margin-bottom: 3%;
   padding: 1px 1.5em;
   font-size: 110%;
@@ -864,6 +887,29 @@ body {
   color: #f12f2f;
   background-color: #fff;
   text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.commit .commit_ex .toggle::after {
+  content: "";
+  margin-left: 0.5em;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top-color: #f12f2f;
+  vertical-align: middle;
+}
+@media screen and (min-width: 600px) {
+  .commit .commit_ex .toggle::after {
+    border-width: 6px;
+  }
+}
+.commit .commit_ex.open .toggle::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.commit .commit_ex div.toggle {
+  margin-top: -5%;
 }
 .commit .commit_ex .txt_wrap {
   margin: 0 auto 8%;
