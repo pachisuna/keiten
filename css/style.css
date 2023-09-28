@@ -630,7 +630,7 @@ body {
   background-image: linear-gradient(transparent 60%, #ffe261 60%, #ffe261 90%, transparent 90%);
 }
 .example .bd_kakko_title + .caption {
-  margin-bottom: 5%;
+  margin: 2% 0 5%;
   text-align: center;
   font-size: 90%;
 }
