@@ -453,6 +453,84 @@ body {
   max-width: 238px;
 }
 
+.advertise {
+  position: relative;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #aeaeac;
+  overflow: hidden;
+}
+.advertise img {
+  display: block;
+}
+.advertise .ttl {
+  width: 20%;
+  max-width: 150px;
+  z-index: 5;
+}
+.advertise .logo_wrap {
+  position: relative;
+  margin-left: 18%;
+  width: 874%;
+}
+.advertise .logos {
+  position: relative;
+  width: 50%;
+  animation-name: logoMove; /* アニメーション名の指定 */
+  animation-delay: 0s; /* アニメーションの開始時間指定 */
+  animation-duration: 41s; /* アニメーション動作時間の指定 */
+  animation-timing-function: linear;
+  /* アニメーションの動き（徐々に早く徐々に遅く）*/
+  animation-iteration-count: infinite; /* アニメーションをループさせる */
+}
+.advertise .logo_Leverages {
+  width: 9.75%;
+  max-width: 320px;
+}
+.advertise .logo_CyberBuzz {
+  width: 7.32%;
+  max-width: 240px;
+}
+.advertise .logo_MODERN_STANDARD {
+  width: 15.3%;
+  max-width: 500px;
+}
+.advertise .logo_AnyMind {
+  width: 11.6%;
+  max-width: 380px;
+}
+.advertise .logo_BEYOND_BORDERS {
+  width: 9.5%;
+  max-width: 310px;
+}
+.advertise .logo_CARRER_DESIGN_CENTER {
+  width: 7.4%;
+  max-width: 240px;
+}
+.advertise .logo_kaonavi {
+  width: 11.3%;
+  max-width: 370px;
+}
+.advertise .logo_nextbeat {
+  width: 10.7%;
+  max-width: 350px;
+}
+.advertise .logo_fundbook {
+  width: 6.5%;
+  max-width: 210px;
+}
+.advertise .logo_CyberACE {
+  width: 11%;
+  max-width: 360px;
+}
+
+@keyframes logoMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .mv {
   padding-bottom: 20%;
   color: #fff;
@@ -482,19 +560,19 @@ body {
   width: 100%;
 }
 .mv .mv_point .caption {
-  font-size: 90%;
+  font-size: 80%;
 }
 .mv .mv_point_bottom {
-  margin: 0 auto 2%;
+  margin: 0 auto;
   width: 82%;
 }
 .mv .mv_point_bottom .img {
   margin: 0 auto;
-  width: 24%;
-  max-width: 148px;
+  width: 20%;
+  max-width: 120px;
 }
 .mv .mv_point_bottom h2 {
-  margin-top: 7%;
+  margin-top: 2%;
   width: 75;
   line-height: 1.4;
   font-weight: 900;
